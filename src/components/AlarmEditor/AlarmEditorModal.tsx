@@ -24,7 +24,7 @@ export const AlarmEditorModal: React.FC<Props> = ({ editing, onClose }) => {
   const updateAlarm = useAlarmStore((s) => s.updateAlarm);
   const deleteAlarm = useAlarmStore((s) => s.deleteAlarm);
 
-  const isNew = !editing;
+  const isNew = !editing?.id;
 
   /* repeatType 判定 */
   const initialRepeatType: "weekday" | "dateOnce" | "monthly" =
