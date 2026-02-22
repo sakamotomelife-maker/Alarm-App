@@ -62,12 +62,12 @@ export const AlarmList: React.FC = () => {
         />
       ))}
 
-      {editing && (
-        <AlarmEditorModal
-          editing={editing}
-          onClose={() => setEditing(null)}
-        />
-      )}
+    {editing !== undefined && (
+      <AlarmEditorModal
+        editing={editing}
+        onClose={() => setEditing(undefined)}
+      />
+    )}
 
       {showFuroku && (
         <FurokuModal onClose={() => setShowFuroku(false)} />
