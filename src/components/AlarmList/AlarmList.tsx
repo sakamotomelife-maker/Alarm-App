@@ -5,7 +5,6 @@ import { AlarmEditorModal } from "../AlarmEditor/AlarmEditorModal";
 import { FurokuModal } from "../Furoku/FurokuModal";
 import { AlarmToast } from "../AlarmToast/AlarmToast";
 import { useAlarmRuntimeStore } from "../../store/useAlarmRuntimeStore";
-import { newId } from "../../utils/id";
 
 
 export const AlarmList: React.FC = () => {
