@@ -57,7 +57,7 @@ export const AlarmList: React.FC = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <button
             className="add-btn"
-            onClick={() => setEditing(createEmptyAlarm())}
+            onClick={() => setEditing(null)}
           >
             ＋ 新規
           </button>
