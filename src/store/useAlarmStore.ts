@@ -59,31 +59,26 @@ export const useAlarmStore = create<AlarmStore>((set, get) => ({
      （古い string[] データを number[] に変換）
   ---------------------------------------- */
   load: () => {
-    const raw = localStorage.getItem("alarms");
-    if (!raw) return;
+  const raw = localStorage.getItem("alarms");
 
-    try {
-      const parsed = JSON.parse(raw);
+  // ★ null のときは空配列として扱う（ここが重要）
+  const parsed = raw ? JSON.parse(raw) : [];
 
-      const fixed: Alarm[] = parsed.map((a: any) => ({
-        ...a,
+  try {
+    const fixed: Alarm[] = parsed.map((a: any) => ({
+      ...a,
+      monthlyDates: (a.monthlyDates ?? []).map((d: any) => Number(d) || 0),
+      minutePatterns: (a.minutePatterns ?? []).map((m: any) => Number(m) || 0),
+      holidayBehavior: a.holidayBehavior ?? "run",
+      soundName: a.soundName ?? a.sound ?? "none",
+    }));
 
-        /* number[] に統一 */
-        monthlyDates: (a.monthlyDates ?? []).map((d: any) => Number(d) || 0),
-        minutePatterns: (a.minutePatterns ?? []).map((m: any) => Number(m) || 0),
-
-        /* holidayBehavior の補完 */
-        holidayBehavior: a.holidayBehavior ?? "run",
-
-        /* soundName の補完 */
-        soundName: a.soundName ?? a.sound ?? "none",
-      }));
-
-      set({ alarms: fixed });
-    } catch (e) {
-      console.error("Failed to load alarms:", e);
-    }
-  },
+    set({ alarms: fixed });
+  } catch (e) {
+    console.error("Failed to load alarms:", e);
+    set({ alarms: [] }); // ★ エラー時も空配列で初期化
+  }
+},
 
   /* ----------------------------------------
      ★ 保存
