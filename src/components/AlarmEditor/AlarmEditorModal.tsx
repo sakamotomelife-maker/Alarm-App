@@ -19,6 +19,8 @@ type Props = {
   onClose: () => void;
 };
 
+console.log("AlarmEditorModal loaded")
+
 export const AlarmEditorModal: React.FC<Props> = ({ editing, onClose }) => {
   const addAlarm = useAlarmStore((s) => s.addAlarm);
   const updateAlarm = useAlarmStore((s) => s.updateAlarm);
