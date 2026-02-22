@@ -7,33 +7,6 @@ import { AlarmToast } from "../AlarmToast/AlarmToast";
 import { useAlarmRuntimeStore } from "../../store/useAlarmRuntimeStore";
 import { newId } from "../../utils/id";
 
-/* ★ 新規アラームの初期値を作る関数 */
-const createEmptyAlarm = (): Alarm => ({
-  id: newId(),
-  name: "",
-  time: "09:00",
-
-  repeatType: "weekday",
-  days: [],
-  dateOnce: null,
-  monthlyDates: [],
-  minutePatterns: [],
-
-  activeFrom: null,
-  activeTo: null,
-  expireAt: null,
-
-  includeHoliday: false,
-  holidayBehavior: "run",
-
-  sound: "none",
-  soundName: "none",
-
-  durationMode: "fixed",
-  durationSec: 5,
-
-  enabled: true,
-});
 
 export const AlarmList: React.FC = () => {
   const alarms = useAlarmStore((s) => s.alarms);
