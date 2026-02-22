@@ -29,7 +29,7 @@ export const AlarmList: React.FC = () => {
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <button
             className="add-btn"
-            onClick={() => setEditing(null)}
+            onClick={() => setEditing({} as Alarm)}
           >
             ＋ 新規
           </button>
@@ -65,7 +65,7 @@ export const AlarmList: React.FC = () => {
     {editing !== undefined && (
       <AlarmEditorModal
         editing={editing}
-        onClose={() => setEditing(undefined)}
+        onClose={() => setEditing(null)}
       />
     )}
 
