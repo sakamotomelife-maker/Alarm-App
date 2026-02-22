@@ -6,7 +6,6 @@ import { FurokuModal } from "../Furoku/FurokuModal";
 import { AlarmToast } from "../AlarmToast/AlarmToast";
 import { useAlarmRuntimeStore } from "../../store/useAlarmRuntimeStore";
 
-
 export const AlarmList: React.FC = () => {
   const alarms = useAlarmStore((s) => s.alarms);
 
@@ -14,7 +13,9 @@ export const AlarmList: React.FC = () => {
   const stopSound = useAlarmRuntimeStore((s) => s.stopSound);
   const completeCard = useAlarmRuntimeStore((s) => s.completeCard);
 
-  const [editing, setEditing] = useState<Alarm | null>(null);
+  // ★ 起動時は undefined → モーダル出ない
+  const [editing, setEditing] = useState<Alarm | null | undefined>(undefined);
+
   const [showFuroku, setShowFuroku] = useState(false);
 
   return (
@@ -27,6 +28,7 @@ export const AlarmList: React.FC = () => {
         <h2>アラーム一覧</h2>
 
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          {/* ★ 新規は空の Alarm を渡す */}
           <button
             className="add-btn"
             onClick={() => setEditing({} as Alarm)}
@@ -62,12 +64,13 @@ export const AlarmList: React.FC = () => {
         />
       ))}
 
-    {editing !== undefined && (
-      <AlarmEditorModal
-        editing={editing}
-        onClose={() => setEditing(null)}
-      />
-    )}
+      {/* ★ editing が null でも Alarm でも表示する */}
+      {editing != null && (
+        <AlarmEditorModal
+          editing={editing}
+          onClose={() => setEditing(undefined)} // ★ 閉じると undefined → モーダル消える
+        />
+      )}
 
       {showFuroku && (
         <FurokuModal onClose={() => setShowFuroku(false)} />
