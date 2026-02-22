@@ -101,7 +101,7 @@ export const PatternEditor: React.FC<Props> = ({
             />
 
             <span className="small-text" style={{ marginLeft: 4 }}>
-              毎時
+              間で
             </span>
 
             {/* ▼ minutePatterns（number[]） */}
@@ -123,7 +123,7 @@ export const PatternEditor: React.FC<Props> = ({
               }}
             />
 
-            <span className="small-text">になったら</span>
+            <span className="small-text">分になったら</span>
           </div>
         </div>
       </div>
