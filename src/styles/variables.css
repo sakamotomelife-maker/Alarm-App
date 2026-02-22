@@ -1,0 +1,12 @@
+:root {
+  --radius: 12px;
+  --blur: 8px;
+  --font-ui: "Segoe UI Variable", "Segoe UI", sans-serif;
+  --shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: var(--font-ui);
+}

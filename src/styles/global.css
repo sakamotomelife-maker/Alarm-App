@@ -1,0 +1,316 @@
+/* ===== Modal Backdrop ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===== Modal Container ===== */
+.modal {
+  width: 480px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  font-family: var(--font-ui);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* ===== Header ===== */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ===== Body ===== */
+.label {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.text-input,
+.time-input,
+.select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ===== Footer ===== */
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.save-btn {
+  background: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.day-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.day-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.shortcut-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.day-btn,
+.shortcut-btn {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: var(--font-ui);
+}
+
+.day-btn.on {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.business {
+  background: #e8f3ff;
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.shortcut-btn {
+  background: #fafafa;
+  border-color: #bbb;
+}
+
+.shortcut-btn:hover,
+.day-btn:hover {
+  background: #eee;
+}
+
+.pattern-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pattern-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.pattern-input {
+  width: 80px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: var(--font-ui);
+}
+
+.pattern-add-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pattern-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pattern-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #eef6ff;
+  border: 1px solid #3498db;
+  font-size: 13px;
+  font-family: var(--font-ui);
+}
+
+.pattern-remove {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #555;
+}
+
+.pattern-empty {
+  font-size: 13px;
+  color: #888;
+}
+
+.duration-selector {
+  width: 100%;
+}
+
+.duration-selector .select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: var(--font-ui);
+}
+
+.alarm-list {
+  padding: 20px;
+  font-family: var(--font-ui);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+}
+
+.list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty {
+  color: #888;
+  font-size: 14px;
+  padding: 20px;
+}
+
+/* ===== Alarm Row ===== */
+.alarm-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.alarm-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.alarm-name {
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.alarm-sub {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+/* ===== Actions ===== */
+.alarm-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.edit-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* ===== Toggle Switch ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+input:checked + .slider {
+  background-color: #3498db;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
