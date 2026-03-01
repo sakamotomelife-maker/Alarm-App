@@ -26,8 +26,10 @@
 - アラームリスト画面
   ![画面例](docs/screenshot1.png)
 
-- 編集Moda・l画面
+
+- 編集Modal画面
   ![画面例](docs/screenshot2.png)
+
 
 - アラーム作動時
   ![画面例](docs/screenshot3.png)
