@@ -19,5 +19,12 @@
 # 技術ポイント
 - Electron + React + Vite + TypeScriptのフルスタック構成アプリ
 - ElectronのNotification APIによるOSの通知機能(EXE版)
-- UIの細かいこだわり
-- Copilotフル活用によるIPCを用いたRendere <-> Main の安全設計（全任せ）
+- UIの細かいこだわり(編集画面Modal化によるシンプル設計 + CSSによるUI調整)
+- Copilotフル活用によるIPCを用いたRendere <-> Main の安全設計
+  ※全てCopilotに任せました。
+
+# スクリーンショット
+- アラームリスト画面
+  ![画面例](docs/screenshot1.png)
+
+- 編集Modal画面
