@@ -7,7 +7,6 @@
 ## ファイルについて
 - Windows向けポータブル版EXE：https://yuki-sakamoto.itch.io/alarm-app
 - WEB版リンク：https://sakamotomelife-maker.github.io/Alarm-App/
-  ※ポータブル版EXEの方が新しいです。
 
 ## 主な機能
 - 曜日指定、日付指定、毎月○○日という繰り返し利用を見越した設計
