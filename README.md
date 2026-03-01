@@ -24,11 +24,10 @@
 
 ## スクリーンショット（EXE版）
 - アラームリスト画面
-  ![画面例](docs/screenshot1.png)
-
+-  ![画面例](docs/screenshot1.png)
 
 - 編集Modal画面
-  ![画面例](docs/screenshot2.png)
+- ![画面例](docs/screenshot2.png)
 
 
 - アラーム作動時
