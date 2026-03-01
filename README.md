@@ -23,12 +23,10 @@
   ※全てCopilotに任せました。
 
 ## スクリーンショット（EXE版）
-- アラームリスト画面
+### アラームリスト画面
   ![画面例](docs/screenshot1.png)
-  <br> <br>
-- 編集Modal画面
+### 編集Modal画面
  ![画面例](docs/screenshot2.png)
-  <br> <br>
-- アラーム作動時
+### アラーム作動時
   ![画面例](docs/screenshot3.png)
   ![画面例](docs/screenshot4.png)
