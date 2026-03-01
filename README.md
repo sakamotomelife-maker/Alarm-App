@@ -1,7 +1,7 @@
 # React.jsでつくったアラームアプリ
 
 ## 概要
-- JavaScript（React含む）を独学で学んでいる最中で、Copilotを使用して作成したアラームアプリです。
+- 初心者がJavaScript（React含む）を独学で学んでいる最中で、Copilotを使用して作成したアラームアプリです。
 - 「5秒だけ鳴らしたい」「毎時10分に鳴らしたい」というニーズを満たすWindows向けアプリがなかったため作成しました。
 
 # ファイルについて
@@ -19,12 +19,17 @@
 # 技術ポイント
 - Electron + React + Vite + TypeScriptのフルスタック構成アプリ
 - ElectronのNotification APIによるOSの通知機能(EXE版)
-- UIの細かいこだわり(編集画面Modal化によるシンプル設計 + CSSによるUI調整)
+- 編集画面Modal化によるUIのシンプル化 + CSSによるUI調整
 - Copilotフル活用によるIPCを用いたRendere <-> Main の安全設計
   ※全てCopilotに任せました。
 
-# スクリーンショット
+# スクリーンショット（EXE版）
 - アラームリスト画面
   ![画面例](docs/screenshot1.png)
 
 - 編集Modal画面
+  ![画面例](docs/screenshot2.png)
+
+- アラーム作動時
+  ![画面例](docs/screenshot3.png)
+  ![画面例](docs/screenshot4.png)
