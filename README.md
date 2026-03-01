@@ -23,7 +23,7 @@
 - Copilotフル活用によるIPCを用いたRendere <-> Main の安全設計
   ※全てCopilotに任せました。
 
-# スクリーンショット（EXE版）
+## スクリーンショット（EXE版）
 - アラームリスト画面
   ![画面例](docs/screenshot1.png)
 
